@@ -61,16 +61,6 @@ function App() {
       }
   }, [numbers])
 
-  // React.useEffect(() => {
-  //     const allHeld = numbers.every(die => die.isHeld)
-  //     const firstValue = numbers[0].value
-  //     const allSameValue = numbers.every(die => die.value === firstValue)
-  //     if (allHeld && allSameValue) {
-  //         setTenzies(true)
-  //         console.log("You won!")
-  //     }
-  // }, [numbers])
-
   const nums = numbers.map(num => (
     <Die key={num.id} value={num.value} isHeld={num.isHeld} holdDice={() => holdDice(num.id)}/>
   ));
